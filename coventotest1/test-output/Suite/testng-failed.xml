@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://demo.guru99.com/test/guru99home/"/>
+    <classes>
+      <class name="Testcases.TC_0001_checkforlogin">
+        <methods>
+          <include name="check1"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="basecheck1"/>
+          <include name="aftercheck1"/>
+        </methods>
+      </class> <!-- Testcases.TC_0001_checkforlogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
