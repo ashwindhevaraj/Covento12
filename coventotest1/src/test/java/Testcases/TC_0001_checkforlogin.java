@@ -21,7 +21,7 @@ public class TC_0001_checkforlogin {
 		System.setProperty("Webdriver.chrome.driver","//src//test//resources//chromedriver_win32//chromedriver");
 		ChromeOptions chromeoptions=new ChromeOptions();
 		chromeoptions.addArguments("--headless");
-		driver=new ChromeDriver();
+		driver=new ChromeDriver(chromeoptions);
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
