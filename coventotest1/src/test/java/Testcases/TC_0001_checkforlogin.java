@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -18,7 +19,9 @@ public class TC_0001_checkforlogin {
 	public void setup(String url,String browser) {
 		if(browser.equalsIgnoreCase("chrome")) {
 		System.setProperty("Webdriver.chrome.driver","//src//test//resources//chromedriver_win32//chromedriver");
-		driver=new ChromeDriver();
+		ChromeOptions chromeoptions=new ChromeOptions();
+		chromeoptions.addArguments("--headless");
+		driver=new ChromeDriver(chromeoptions);
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
