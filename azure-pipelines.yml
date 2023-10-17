@@ -16,11 +16,9 @@ steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'coventotest1/pom.xml'
+    mavenOptions: '-Xmx3072m'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    
