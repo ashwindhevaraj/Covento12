@@ -5,8 +5,9 @@
     <classes>
       <class name="Testcases.TC_0001_checkforlogin">
         <methods>
-          <include name="setup"/>
           <include name="check1"/>
+          <include name="setup"/>
+          <include name="excelread"/>
           <include name="teardown"/>
           <include name="basecheck1"/>
           <include name="aftercheck1"/>
