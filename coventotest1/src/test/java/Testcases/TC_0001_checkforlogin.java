@@ -80,7 +80,7 @@ System.out.println("Third method this is");
 	//Dataprovider at local level
 	@DataProvider
 	public Iterator<Object[]> readdata() throws Exception {
-		ArrayList<Object[]> l=Excelread.initialize(System.getProperty("user.dir")+"/src/test/resources","datasheet.xlsx","Sheet1");
+		ArrayList<Object[]> l=Excelread.initialize(System.getProperty("user.dir")+"//src//test//resources","datasheet.xlsx","Sheet1");
 		return l.iterator();
 	}
 	
