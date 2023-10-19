@@ -28,7 +28,7 @@ public class Excelread{
 	
 public static ArrayList<Object[]> initialize(String filepath,String filename,String sheetname)throws Exception {
 	//Create an object of File class to open xlsx file
-		File file = new File(filepath+"\\"+filename);
+		File file = new File(filepath+"//"+filename);
 		//Create an object of FileInputStream class to read excel file
 		FileInputStream inputStream = new FileInputStream(file);
 		
