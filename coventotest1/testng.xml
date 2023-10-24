@@ -4,13 +4,13 @@
 
 <suite name="Suite">
   <test thread-count="5" name="Test">
-		  <parameter name="url" value="https://demo.guru99.com/test/guru99home/"/>
+		  <parameter name="url" value="https://demo.guru99.com/test/newtours/register.php"/>
 		  <parameter name="browser" value="chrome"/>
-		  <groups>
+		  <!--<groups>
 		  <run>
 			  <include name="regression"></include>
 		  </run>
-	  </groups>
+	  </groups>-->
     <classes>
       <class name="Testcases.TC_0001_checkforlogin"/>
     </classes>

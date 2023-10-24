@@ -6,9 +6,10 @@
       <class name="Testcases.TC_0001_checkforlogin">
         <methods>
           <include name="check1"/>
-          <include name="setup"/>
           <include name="excelread"/>
+          <include name="loginintodemo"/>
           <include name="teardown"/>
+          <include name="loginmercury"/>
           <include name="basecheck1"/>
           <include name="aftercheck1"/>
         </methods>

@@ -10,67 +10,52 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import Corepages.Excelread;
+import Testcases.Utilitieslocal;
 
-
-public class TC_0001_checkforlogin {
-	public static WebDriver driver;
-	@BeforeClass
+public class TC_0001_checkforlogin{
+	//String url="https://demo.guru99.com/test/newtours/register.php";
+	//String browser="edge";
 	@Parameters({"url","browser"})
-	public void setup(String url,String browser) {
-		if(browser.equalsIgnoreCase("chrome")) {
-		//System.setProperty("Webdriver.chrome.driver","//src//test//resources//chromedriver_win32//chromedriver");
-			WebDriverManager.chromedriver().setup();
-		ChromeOptions chromeoptions=new ChromeOptions();
-		chromeoptions.addArguments("--headless");
-		driver=new ChromeDriver(chromeoptions);
-			
-		}
-		else if(browser.equalsIgnoreCase("firefox")) {
-			//System.setProperty("Webdriver.gecko.driver","//src//test//resources//geckodriver-v0.33.0-win64//geckodriver");
-			WebDriverManager.firefoxdriver().setup();
-			driver=new FirefoxDriver();
-		}
-		
-		else if(browser.equalsIgnoreCase("edge")) {
-			//System.setProperty("webdriver.edge.driver","//src//test//resources//edgedriver_win64//msedgedriver");
-			WebDriverManager.edgedriver().setup();
-			driver=new EdgeDriver();
-		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
-		driver.get(url);
-		System.out.println(driver.getTitle());
-		}
+	@BeforeTest
+	public void loginmercury(String url,String browser) {
+		Utilitieslocal.setup(url,browser);
+		System.out.println("passed parameters");
+		//this.driver=Utilitieslocal.driver;
+	}
 	
 	// TC 1 written by Ash
-	@Test(priority=3,dependsOnMethods="basecheck1")
+	@Test(priority=3)
 	public void check1() {
 System.out.println("First method this is");
 }
 	
 	//TC 2 written by Ash
-	@Test(priority=2,groups="regression")
+	@Test(priority=2)
 	public void basecheck1() {
+		Utilitieslocal.driver.get("https://www.gmail.com");
 System.out.println("Second method this is");
 }
 	
 	//TC3 written by Ash
-	@Test(priority=1,groups="regression")
+	@Test(priority=1)
+    
 	public void aftercheck1() {
 System.out.println("Third method this is");
 }
 	
 	//TC4 written by Ash using dataprovider
-	@Test(priority=4,dataProvider="readdata",groups="regression")
+	@Test(priority=4,dataProvider="readdata")
 	public void excelread(String username,String password) {
 		System.out.println("checking this method working");
 		System.out.println(username);
@@ -84,8 +69,9 @@ System.out.println("Third method this is");
 		return l.iterator();
 	}
 	
-	@AfterClass
+	
+	@AfterTest
 	public void teardown() {
-		driver.close();
+		Utilitieslocal.driver.close();
 	}
 }
