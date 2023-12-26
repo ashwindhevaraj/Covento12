@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.TC_0001_checkforlogin">
+      <class name="Testcases.TC_0002_ToolsQA">
         <methods>
-          <include name="check1"/>
-          <include name="excelread"/>
-          <include name="loginintodemo"/>
           <include name="teardown"/>
-          <include name="loginmercury"/>
-          <include name="basecheck1"/>
-          <include name="aftercheck1"/>
+          <include name="radiobuttonactions"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Testcases.TC_0001_checkforlogin -->
+      </class> <!-- Testcases.TC_0002_ToolsQA -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

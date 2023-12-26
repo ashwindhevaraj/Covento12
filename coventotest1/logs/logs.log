@@ -1,0 +1,8 @@
+[INFO ] 2023-10-30 16:57:44.469 [main] Utilitieslocal - edge opened successfully
+[DEBUG] 2023-10-30 16:57:49.861 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2023-10-30 16:57:49.864 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2023-10-30 16:57:49.865 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2023-10-30 17:11:00.003 [main] Utilitieslocal - edge opened successfully
+[DEBUG] 2023-10-30 17:11:10.965 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2023-10-30 17:11:10.968 [main] PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2023-10-30 17:11:10.971 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
