@@ -5,13 +5,13 @@
   <listeners>
 	  <listener class-name="listeners.Generaloutput"/>
   </listeners>
-  <test thread-count="5" name="ToolsQA">
-		  <parameter name="url" value="https://demoqa.com/login"/>
-		  <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="Testcases.TC_0002_ToolsQA"/>
-    </classes>
-  </test>
+<!--  <test thread-count="5" name="ToolsQA">-->
+<!--		  <parameter name="url" value="https://demoqa.com/login"/>-->
+<!--		  <parameter name="browser" value="chrome"/>-->
+<!--    <classes>-->
+<!--      <class name="Testcases.TC_0002_ToolsQA"/>-->
+<!--    </classes>-->
+<!--  </test>-->
   <test thread-count="5" name="Rahulshetty">
 		  <parameter name="url" value="https://rahulshettyacademy.com/AutomationPractice/"/>
 		  <parameter name="browser" value="chrome"/>
