@@ -36,6 +36,7 @@ public class Rahulshettyclass extends Basepage{
 	@FindBy(how=How.XPATH,using="//input[@placeholder='Hide/Show Example']//following::table[position()=1]//tbody//tr")List<WebElement> dynamictablerows;
 	@FindBy(how=How.XPATH,using="//input[@placeholder='Hide/Show Example']//following::table[position()=1]//thead//tr//th")List<WebElement> dynamictablecols;
 	@FindBy(how=How.CSS,using="select[id='dropdown-class-example']")WebElement selectdpdown;
+	@FindBy(how=How.CSS,using="[placeholder='Type to Select Countries']")WebElement suggestionbox1;
 	public void clickradiobutton() {
 		radio1.click();
 		radio2.click();
@@ -106,4 +107,11 @@ public class Rahulshettyclass extends Basepage{
 		Assert.assertTrue(op1.equals(op2),"Both array in ascending order only");
 		//changed this line again
 	}
+	public void suggestionbox() {
+		this.waitforelementclickable(suggestionbox1);	
+		suggestionbox1.sendKeys("India");
+		WebElement exactpick=driver.findElement(By.xpath("//ul//li//div[text()='India']"));
+		this.waitforelementclickable(exactpick);
+		exactpick.click();
+		}
 }

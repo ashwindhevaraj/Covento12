@@ -49,6 +49,10 @@ public void brokenlinkvalidations() {
 public void selectdropdown() {
 	rspage.selectdpdownoption();
 }
+@Test(priority=8)
+public void suggestionbox() {
+	rspage.suggestionbox();
+}
 }
 
 

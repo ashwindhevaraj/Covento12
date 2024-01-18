@@ -10,6 +10,7 @@ public void onTestStart(ITestResult tr) {
 }
 public void onTestSuccess(ITestResult tr) {
 	System.out.println("Test cases passed successfully- message from listener class");
+	System.out.println(tr.getInstanceName());
 }
 public void onTestFailure(ITestResult tr) {
 	System.out.println("Testcases failed- message from Listener class");
