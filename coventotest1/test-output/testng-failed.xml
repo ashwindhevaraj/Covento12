@@ -8,24 +8,21 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="https://rahulshettyacademy.com/AutomationPractice/"/>
     <classes>
-      <class name="Testcases.TC_0002_ToolsQA">
+      <class name="Testcases.TC_0003_RahushettyTC">
         <methods>
-          <include name="checkboxaction"/>
-          <include name="teardown"/>
-          <include name="calenderactions"/>
-          <include name="radiobuttonactions"/>
-          <include name="setup"/>
-          <include name="textboxactions"/>
-          <include name="displaylinks"/>
-          <include name="handlingbrokenimage"/>
-          <include name="mouseactions"/>
-          <include name="Enterdetails" invocation-numbers="0"/>
+          <include name="checkboxclick"/>
+          <include name="clickradiobutton"/>
+          <include name="brokenlinkvalidations"/>
+          <include name="alertpopuphandler"/>
           <include name="windowhandler"/>
-          <include name="handlingbrokenlinks"/>
-          <include name="webtablehandling"/>
-          <include name="draganddrop"/>
+          <include name="suggestionbox"/>
+          <include name="setup"/>
+          <include name="selectdropdown"/>
+          <include name="init"/>
+          <include name="dynamictablehandler"/>
+          <include name="displayalllinks"/>
         </methods>
-      </class> <!-- Testcases.TC_0002_ToolsQA -->
+      </class> <!-- Testcases.TC_0003_RahushettyTC -->
     </classes>
   </test> <!-- Rahulshetty(failed) -->
 </suite> <!-- Failed suite [Suite] -->

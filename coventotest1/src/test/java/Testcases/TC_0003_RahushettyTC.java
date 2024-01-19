@@ -53,6 +53,10 @@ public void selectdropdown() {
 public void suggestionbox() {
 	rspage.suggestionbox();
 }
+@Test(priority=9)
+public void checkboxclick() {
+	rspage.checkboxclick();
+}
 }
 
 
