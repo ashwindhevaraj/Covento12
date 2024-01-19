@@ -37,6 +37,9 @@ public class Rahulshettyclass extends Basepage{
 	@FindBy(how=How.XPATH,using="//input[@placeholder='Hide/Show Example']//following::table[position()=1]//thead//tr//th")List<WebElement> dynamictablecols;
 	@FindBy(how=How.CSS,using="select[id='dropdown-class-example']")WebElement selectdpdown;
 	@FindBy(how=How.CSS,using="[placeholder='Type to Select Countries']")WebElement suggestionbox1;
+	@FindBy(how=How.CSS,using="label [type='checkbox']")List<WebElement> checkboxall;
+	
+	
 	public void clickradiobutton() {
 		radio1.click();
 		radio2.click();
@@ -114,4 +117,9 @@ public class Rahulshettyclass extends Basepage{
 		this.waitforelementclickable(exactpick);
 		exactpick.click();
 		}
+	public void checkboxclick() {
+		for(int i=0;i<checkboxall.size();i++) {
+			checkboxall.get(i).click();
+		}
+	}
 }
