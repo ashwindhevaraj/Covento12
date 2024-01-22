@@ -10,17 +10,8 @@
     <classes>
       <class name="Testcases.TC_0003_RahushettyTC">
         <methods>
-          <include name="checkboxclick"/>
-          <include name="clickradiobutton"/>
-          <include name="brokenlinkvalidations"/>
-          <include name="alertpopuphandler"/>
-          <include name="windowhandler"/>
-          <include name="suggestionbox"/>
           <include name="setup"/>
-          <include name="selectdropdown"/>
-          <include name="init"/>
-          <include name="dynamictablehandler"/>
-          <include name="displayalllinks"/>
+          <include name="newtabhandling"/>
         </methods>
       </class> <!-- Testcases.TC_0003_RahushettyTC -->
     </classes>

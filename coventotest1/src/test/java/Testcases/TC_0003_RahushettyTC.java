@@ -57,6 +57,10 @@ public void suggestionbox() {
 public void checkboxclick() {
 	rspage.checkboxclick();
 }
+@Test(priority=10)
+public void newtabhandling() {
+	rspage.newtabhandling();
+}
 }
 
 
