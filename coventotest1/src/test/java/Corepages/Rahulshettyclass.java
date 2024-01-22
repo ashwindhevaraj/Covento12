@@ -38,6 +38,8 @@ public class Rahulshettyclass extends Basepage{
 	@FindBy(how=How.CSS,using="select[id='dropdown-class-example']")WebElement selectdpdown;
 	@FindBy(how=How.CSS,using="[placeholder='Type to Select Countries']")WebElement suggestionbox1;
 	@FindBy(how=How.CSS,using="label [type='checkbox']")List<WebElement> checkboxall;
+	@FindBy(how=How.CSS,using="#opentab")WebElement newtabbutton;
+	@FindBy(how=How.XPATH,using="//div[@id='navbarSupportedContent']//a[text()='Blog']")WebElement blogbutton;
 	
 	
 	public void clickradiobutton() {
@@ -64,7 +66,7 @@ public class Rahulshettyclass extends Basepage{
 		this.waitforelementclickable(windowbtn);
 		windowbtn.click();
 		String mainwindow=driver.getWindowHandle();
-		(windowbtn).click();
+		//(windowbtn).click();
 		Set<String> handles=driver.getWindowHandles();
 		Iterator iter=handles.iterator();
 		while(iter.hasNext()) {
@@ -121,5 +123,22 @@ public class Rahulshettyclass extends Basepage{
 		for(int i=0;i<checkboxall.size();i++) {
 			checkboxall.get(i).click();
 		}
+	}
+	public void newtabhandling() {
+		this.waitforelementclickable(newtabbutton);
+		newtabbutton.click();
+		String mainwindow=driver.getWindowHandle();
+		Set<String> childwindows=driver.getWindowHandles();
+		Iterator iter=childwindows.iterator();
+		while(iter.hasNext()) {
+			String child=(String)iter.next();
+			if(!mainwindow.equalsIgnoreCase(child)) {
+				driver.switchTo().window(child);
+				this.waitforelementclickable(blogbutton);
+				blogbutton.click();
+				driver.close();
+			}
+		}
+		driver.switchTo().window(mainwindow);
 	}
 }
