@@ -61,6 +61,10 @@ public void checkboxclick() {
 public void newtabhandling() {
 	rspage.newtabhandling();
 }
+@Test(priority=11)
+public void alerthandler2() {
+	rspage.alerthandler2();
+}
 }
 
 

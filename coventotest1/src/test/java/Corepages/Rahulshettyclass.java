@@ -30,6 +30,7 @@ public class Rahulshettyclass extends Basepage{
 	@FindBy(how=How.CSS,using="[value='radio2']")WebElement radio2;
 	@FindBy(how=How.CSS,using="[value='radio3']")WebElement radio3;
 	@FindBy(how=How.CSS,using="#alertbtn")WebElement alertbtn;
+	@FindBy(how=How.CSS,using="#confirmbtn")WebElement confirmbtn;
 	@FindBy(how=How.CSS,using="#openwindow")WebElement windowbtn;
 	@FindBy(how=How.XPATH,using="(//a[text()='Courses'])[1]")WebElement childwindow_courses;
 	@FindBy(how=How.XPATH,using="//input[@placeholder='Hide/Show Example']//following::table[position()=1]")WebElement dynamictable;
@@ -59,8 +60,12 @@ public class Rahulshettyclass extends Basepage{
 		Alert alert=driver.switchTo().alert();
 		System.out.println(alert.getText());
 		alert.accept();
-		//driver.switchTo().defaultContent();
-		//driver.switchTo().frame("iii");
+	}
+	public void alerthandler2() {
+		this.waitforelementclickable(confirmbtn);
+		confirmbtn.click();
+		Alert alert=driver.switchTo().alert();
+		alert.dismiss();
 	}
 	public void windowhandler() {
 		this.waitforelementclickable(windowbtn);
@@ -87,9 +92,9 @@ public class Rahulshettyclass extends Basepage{
 		System.out.println(dynamictablerows.size());
 		//List<WebElement> cols=driver.findElements(dynamictablecols);
 		System.out.println(dynamictablecols.size());
-		for(int i=1;i<dynamictablerows.size();i++) {
+		for(int i=1;i<=dynamictablerows.size();i++) {
 			for(int j=0;j<dynamictablecols.size();j++) {
-				System.out.print(driver.findElement(By.xpath("//input[@placeholder=\"Hide/Show Example\"]//following::table[position()=1]//tbody//tr["+i+"]//td["+(j+1)+"]")).getText()+" ");
+				System.out.printf("%-15s%s",driver.findElement(By.xpath("//input[@placeholder=\"Hide/Show Example\"]//following::table[position()=1]//tbody//tr["+i+"]//td["+(j+1)+"]")).getText(),"|");
 			}
 			System.out.println();
 		}
