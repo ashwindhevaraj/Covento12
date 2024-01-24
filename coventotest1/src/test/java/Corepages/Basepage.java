@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.Iterator;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,12 +43,19 @@ public class Basepage {
 		aaa=act1.doubleClick(element).build();
 		aaa.perform();
 	}
+	public void scrolltoelement(WebElement element) {
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",element);
+	}
 	public void rightclick(WebElement element) {
 		aaa=act1.contextClick(element).build();
 		aaa.perform();
 	}
 	public void mouseclick(WebElement element) {
 		aaa=act1.moveToElement(element).click().build();
+		aaa.perform();
+	}
+	public void mousehover(WebElement element) {
+		aaa=act1.moveToElement(element).build();
 		aaa.perform();
 	}
 	public void keyboardmultiselect(List<WebElement> element) {

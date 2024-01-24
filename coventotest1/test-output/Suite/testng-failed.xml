@@ -5,13 +5,21 @@
     <listener class-name="listeners.Generaloutput"/>
   </listeners>
   <test thread-count="5" name="Rahulshetty(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="safari"/>
     <parameter name="url" value="https://rahulshettyacademy.com/AutomationPractice/"/>
     <classes>
       <class name="Testcases.TC_0003_RahushettyTC">
         <methods>
+          <include name="checkboxclick"/>
+          <include name="brokenlinkvalidations"/>
+          <include name="windowhandler"/>
+          <include name="suggestionbox"/>
           <include name="setup"/>
+          <include name="selectdropdown"/>
           <include name="newtabhandling"/>
+          <include name="alerthandler2"/>
+          <include name="mousehoverhandling"/>
+          <include name="dynamictablehandler"/>
         </methods>
       </class> <!-- Testcases.TC_0003_RahushettyTC -->
     </classes>

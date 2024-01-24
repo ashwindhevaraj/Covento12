@@ -65,6 +65,10 @@ public void newtabhandling() {
 public void alerthandler2() {
 	rspage.alerthandler2();
 }
+@Test(priority=12)
+public void mousehoverhandling() {
+	rspage.mouseoverexample();
+}
 }
 
 

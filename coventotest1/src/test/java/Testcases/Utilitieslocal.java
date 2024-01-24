@@ -19,6 +19,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -70,6 +71,9 @@ public class Utilitieslocal {
 			EdgeOptions options=new EdgeOptions();
 			options.addArguments("InPrivate");
 			driver=WebDriverManager.edgedriver().capabilities(options).create();
+		}
+		else if(browser.equalsIgnoreCase("safari")) {
+			driver=WebDriverManager.safaridriver().create();
 		}
 		//driver=new RemoteWebDriver(dc); we can use this statement if we use hub and node concept 
 		screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

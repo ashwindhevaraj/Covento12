@@ -41,6 +41,7 @@ public class Rahulshettyclass extends Basepage{
 	@FindBy(how=How.CSS,using="label [type='checkbox']")List<WebElement> checkboxall;
 	@FindBy(how=How.CSS,using="#opentab")WebElement newtabbutton;
 	@FindBy(how=How.XPATH,using="//div[@id='navbarSupportedContent']//a[text()='Blog']")WebElement blogbutton;
+	@FindBy(how=How.CSS,using="#mousehover")WebElement mouseoverbutton;
 	
 	
 	public void clickradiobutton() {
@@ -145,5 +146,14 @@ public class Rahulshettyclass extends Basepage{
 			}
 		}
 		driver.switchTo().window(mainwindow);
+	}
+	public void mouseoverexample() {
+		this.scrolltoelement(mouseoverbutton);
+		this.mousehover(mouseoverbutton);
+		List<WebElement> ops=driver.findElements(By.xpath("//div[@class='mouse-hover-content']//a"));
+		for(int i=0;i<ops.size();i++) {
+			System.out.println(ops.get(i).getText());
+		}
+		Assert.assertEquals("Reload",ops.get(ops.size()-1).getText());
 	}
 }
