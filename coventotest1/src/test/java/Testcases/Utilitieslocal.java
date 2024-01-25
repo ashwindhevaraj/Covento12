@@ -44,7 +44,7 @@ public class Utilitieslocal {
 			//WebDriverManager.chromedriver().setup();
 		ChromeOptions chromeoptions=new ChromeOptions();
 		chromeoptions.addArguments("--incognito");
-		chromeoptions.addArguments("--headless");
+		//chromeoptions.addArguments("--headless");
 		driver=WebDriverManager.chromedriver().capabilities(chromeoptions).create();
 			/*dc.setBrowserName("chrome");		
 			log.info("chrome driver opened up");*/
