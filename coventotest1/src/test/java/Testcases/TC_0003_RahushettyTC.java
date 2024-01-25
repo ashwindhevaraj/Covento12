@@ -69,6 +69,10 @@ public void alerthandler2() {
 public void mousehoverhandling() {
 	rspage.mouseoverexample();
 }
+@Test(priority=13)
+public void iframeaccess() {
+	rspage.iframeexample();
+}
 }
 
 
