@@ -43,7 +43,7 @@ public class Utilitieslocal {
 			//https://rahulshettyacademy.com/AutomationPractice/-use this hereafter
 			//WebDriverManager.chromedriver().setup();
 		ChromeOptions chromeoptions=new ChromeOptions();
-		chromeoptions.addArguments("--incognito");
+		//chromeoptions.addArguments("--incognito");
 		//chromeoptions.addArguments("--headless");
 		driver=WebDriverManager.chromedriver().capabilities(chromeoptions).create();
 			/*dc.setBrowserName("chrome");		
