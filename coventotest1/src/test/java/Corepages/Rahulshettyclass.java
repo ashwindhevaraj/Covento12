@@ -42,6 +42,8 @@ public class Rahulshettyclass extends Basepage{
 	@FindBy(how=How.CSS,using="#opentab")WebElement newtabbutton;
 	@FindBy(how=How.XPATH,using="//div[@id='navbarSupportedContent']//a[text()='Blog']")WebElement blogbutton;
 	@FindBy(how=How.CSS,using="#mousehover")WebElement mouseoverbutton;
+	@FindBy(how=How.XPATH,using="//div//fieldset//legend[text()='iFrame Example']")WebElement iframeexample;
+	@FindBy(how=How.XPATH,using="//div[@class='header-upper']//li//a[contains(text(),'More ')]")WebElement iframemenu;
 	
 	
 	public void clickradiobutton() {
@@ -155,5 +157,11 @@ public class Rahulshettyclass extends Basepage{
 			System.out.println(ops.get(i).getText());
 		}
 		Assert.assertEquals("Reload",ops.get(ops.size()-1).getText());
+	}
+	public void iframeexample() {
+		this.scrolltoelement(iframeexample);
+		driver.switchTo().frame("courses-iframe");
+		this.mousehover(iframemenu);
+		driver.switchTo().defaultContent();
 	}
 }
