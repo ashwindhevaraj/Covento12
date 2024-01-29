@@ -73,6 +73,11 @@ public void mousehoverhandling() {
 public void iframeaccess() {
 	rspage.iframeexample();
 }
+//this is accessing webelement after iframe checking
+@Test(priority=14)
+public void outsidelinkaccess() {
+	rspage.outsidelinkaccess();
+}
 }
 
 

@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.apache.commons.io.output.LockableFileWriter;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -164,4 +165,11 @@ public class Rahulshettyclass extends Basepage{
 		this.mousehover(iframemenu);
 		driver.switchTo().defaultContent();
 	}
+	public void outsidelinkaccess() {
+		List<WebElement> links=driver.findElements(By.xpath("//div[@id='gf-BIG']//table//a"));
+		for(int i=0;i<links.size();i++) {
+			System.out.printf("%-15s%s",links.get(i).getText(),"|");
+		}
+		links.get(0).click();
+		}
 }
