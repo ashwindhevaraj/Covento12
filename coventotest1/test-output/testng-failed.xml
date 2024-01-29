@@ -10,10 +10,15 @@
     <classes>
       <class name="Testcases.TC_0003_RahushettyTC">
         <methods>
+          <include name="checkboxclick"/>
+          <include name="outsidelinkaccess"/>
+          <include name="windowhandler"/>
+          <include name="suggestionbox"/>
+          <include name="selectdropdown"/>
           <include name="setup"/>
+          <include name="alerthandler2"/>
           <include name="iframeaccess"/>
           <include name="newtabhandling"/>
-          <include name="alerthandler2"/>
           <include name="mousehoverhandling"/>
         </methods>
       </class> <!-- Testcases.TC_0003_RahushettyTC -->

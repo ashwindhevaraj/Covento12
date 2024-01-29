@@ -5,19 +5,22 @@
     <classes>
       <class name="Testcases.TC_0003_RahushettyTC">
         <methods>
-          <include name="checkboxclick"/>
           <include name="clickradiobutton"/>
+          <include name="suggestionbox"/>
+          <include name="setup"/>
+          <include name="selectdropdown"/>
+          <include name="iframeaccess"/>
+          <include name="displayalllinks"/>
+          <include name="checkboxclick"/>
+          <include name="outsidelinkaccess"/>
           <include name="brokenlinkvalidations"/>
           <include name="alertpopuphandler"/>
           <include name="windowhandler"/>
-          <include name="suggestionbox"/>
-          <include name="selectdropdown"/>
-          <include name="setup"/>
           <include name="newtabhandling"/>
           <include name="alerthandler2"/>
-          <include name="dynamictablehandler"/>
+          <include name="mousehoverhandling"/>
           <include name="init"/>
-          <include name="displayalllinks"/>
+          <include name="dynamictablehandler"/>
         </methods>
       </class> <!-- Testcases.TC_0003_RahushettyTC -->
     </classes>
